@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById("root");
+    console.log(typeof root);
+    let arr = [];
+    let i = 0;
+    for(let proerties in root){
+      // console.log(proerties);
+      const p = document.createElement("p");
+      p.textContent = proerties
+      root.appendChild(p)
+      arr.push(proerties);
+      i++
+      if ( i% 2 === 0 ){
+        console.dir(p)
+        p[i].style.color = "red"
+      }
+      // root.textContent = arr
+    }
+    // console.log(i)
+    // let value = arr[i]; 
+    
+    // console.log(arr);
+    </script>
+</body>
+</html>
